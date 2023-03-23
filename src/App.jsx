@@ -12,6 +12,7 @@ function App() {
   const [data, setData] = useState({});
   const [isVisible, setIsVisible] = useState(false);
   const [error, setError] = useState('');
+  const [currentTime, setCurrentTime] = useState('');
 
   
   useEffect( () => {
@@ -26,6 +27,10 @@ function App() {
     if(e) e.preventDefault();
 
     setError('');
+    
+    let time = new Date().toString();
+    time = time.slice(4, 10) + ', ' + time.slice(16, 21);
+    setCurrentTime(time);
 
     setIsVisible(false);
     setTimeout(() => {
@@ -90,28 +95,32 @@ function App() {
   }
  
   return (
-    
     <div className={`App ${data.background} ${isVisible ? 'visible' : ''}`}>
       <form>
           <input onChange={handleChange} type="text" placeholder='Search places' required />
           <button onClick={handleSubmit} className='search-button'> <SearchIcon/> </button>
       </form>
+      
+      <div className={`data ${isVisible ? 'visible' : ''}`}>
+        {error.length != 0 ? (
+          <div className='error'>
+            <p className='error-header'>Oops!</p>
+            <p>{error}</p>
+          </div>
+        ) : (
+          <div className='valid'>
+            <p className='location'>
+              {data.name}
+              {data.name != data.country && `, ${data.country}`}
+            </p>
+            <p className='time'>{currentTime}</p>
+            {data.weather}
+            <p className='temperature'>{data.temperature} °C</p>
+            <p>{data.background}</p>
+          </div>
+        )}
+      </div>
 
-      {error.length != 0 ? (
-        <div className='error'>
-          <p className='oops'>Oops!</p>
-          <p> {error} </p>
-         </div>
-      ) : (
-        <div className={`data ${isVisible ? 'visible' : ''}`}>
-          <p className='location'>{data.name}
-          {data.name != data.country && `, ${data.country}`}
-          </p>
-          {data.weather}
-          <p className='temperature'>{data.temperature} °C</p>
-          <p>{data.background}</p>
-        </div>
-  )}
     </div>
   );
 }
