@@ -45,9 +45,9 @@ svg{
 }
 
 .App{
+    width: 350px;
     box-sizing: border-box;
     padding-top: 30px;
-    width: 20%;
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -147,4 +147,29 @@ input, input:focus{
     margin-bottom: 30px;
     font-size: 16px;
     font-weight: 400;
+}
+
+
+@media screen and (max-width: 500px) {
+    .App.Sunny.visible,
+    .App.Cloudy.visible,
+    .App.Rainy.visible{
+        width: 270px;
+    }
+}
+
+@media screen and (max-height: 780px) {
+    .App {
+        padding: 0;
+    }
+
+    form{
+        margin: 20px;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .App {
+        height: 420px;
+    }
 }
