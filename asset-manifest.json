@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-weather-app/static/css/main.28771db1.css",
-    "main.js": "/react-weather-app/static/js/main.68c32ae7.js",
-    "static/js/787.7327b580.chunk.js": "/react-weather-app/static/js/787.7327b580.chunk.js",
-    "index.html": "/react-weather-app/index.html",
-    "main.28771db1.css.map": "/react-weather-app/static/css/main.28771db1.css.map",
-    "main.68c32ae7.js.map": "/react-weather-app/static/js/main.68c32ae7.js.map",
-    "787.7327b580.chunk.js.map": "/react-weather-app/static/js/787.7327b580.chunk.js.map"
+    "main.css": "/git@github.com:3imantas/react-weather-app.git/static/css/main.37c9c50f.css",
+    "main.js": "/git@github.com:3imantas/react-weather-app.git/static/js/main.b29f4cc3.js",
+    "static/js/787.7327b580.chunk.js": "/git@github.com:3imantas/react-weather-app.git/static/js/787.7327b580.chunk.js",
+    "index.html": "/git@github.com:3imantas/react-weather-app.git/index.html",
+    "main.37c9c50f.css.map": "/git@github.com:3imantas/react-weather-app.git/static/css/main.37c9c50f.css.map",
+    "main.b29f4cc3.js.map": "/git@github.com:3imantas/react-weather-app.git/static/js/main.b29f4cc3.js.map",
+    "787.7327b580.chunk.js.map": "/git@github.com:3imantas/react-weather-app.git/static/js/787.7327b580.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.28771db1.css",
-    "static/js/main.68c32ae7.js"
+    "static/css/main.37c9c50f.css",
+    "static/js/main.b29f4cc3.js"
   ]
 }
